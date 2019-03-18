@@ -90,7 +90,7 @@ namespace Masterin24Hrs
     }
     */
 
-    // Day 3 ***
+    // Day 3 ***      *          *
 
     /* Pie
     class Pie
@@ -155,7 +155,7 @@ class ifTest
     }
 }
       */
-    
+
     /* ifTest2
     class ifTest2
     {
@@ -183,6 +183,7 @@ class ifTest
     }
     */
 
+    /* ifShort
     class ifShort
     {
         static void Main()
@@ -197,4 +198,222 @@ class ifTest
             Console.ReadKey();
         }
     }
+    */
+
+    // Day 4 ****     *          *
+
+    /* ifElse
+    class ifElse
+    {
+        static void Main()
+        {
+            char gender = 'z';
+
+            if (gender == 'm' || gender == 'f')
+            {
+                Console.WriteLine("The gender is valid: {0}.", gender);
+            }
+            else
+            {
+                Console.WriteLine("The gender is NOT valid: {0}.", gender);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Az IF vége.");
+            Console.ReadKey();
+        }
+    }
+    */
+
+    /* nested IF
+    class ifElse2
+    {
+        static void Main()
+        {
+            char gender = 'f';
+
+            if (gender == 'm')
+            {
+                Console.WriteLine("The gender is valid: {0}.", gender);
+            }
+            else
+            {
+                if (gender == 'f')
+                {
+                    Console.WriteLine("The gender is valid: {0}.", gender);
+                }
+                else
+                {
+                    Console.WriteLine("The gender is unknown: {0}.", gender);
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("Az IF vége.");
+            Console.ReadKey();
+        }
+    }
+    */
+
+    /* switch
+    class dice
+    {
+        static void Main()
+        {
+            Random rnd = new Random();
+            int dice = rnd.Next(1, 7);  // Next() - Returns a non-negative random integer.
+
+            Console.WriteLine("Starting the switch..");
+
+            switch (dice)
+            {
+                case 1:
+                    Console.WriteLine("Egy");
+                    break;
+                case 2:
+                    Console.WriteLine("Kettő");
+                    break;
+                case 3:
+                    Console.WriteLine("Három");
+                    break;
+                case 4:
+                    Console.WriteLine("Négy");
+                    break;
+                case 5:
+                    Console.WriteLine("Öt");
+                    break;
+                case 6:
+                    Console.WriteLine("Hat");
+                    break;
+                default:
+                    Console.WriteLine("Alapértelmezett érték");
+                    break;
+            }
+
+            Console.WriteLine("Switch vége");
+            Console.ReadLine();
+        }
+    }
+    */
+
+    /* switch Paros-e
+    class OddEven_1
+    {
+        static void Main()
+        {
+            Random rnd = new Random();
+            int dice = rnd.Next(1, 7);  // Next() - Returns a non-negative random integer.
+
+            Console.WriteLine("Starting the switch..");
+
+            switch (dice)
+            {
+                case 1:
+                case 3:
+                case 5:
+                    Console.WriteLine("Páratlan - Odd");
+                    break;
+
+                case 2:
+                case 4:
+                case 6:
+                    Console.WriteLine("Páros - Even");
+                    break;
+                default:
+                    Console.WriteLine("Alapértelmezett érték");
+                    break;
+            }
+
+            Console.WriteLine("Switch vége");
+            Console.ReadLine();
+        }
+    }
+    */
+
+    /* while átlagszámítás
+    class avarage
+    {
+        static void Main()
+        {
+            int osszeg = 0; // ttl - total
+            int szam = 0; // nbr - number
+            int szamlalo = 0; // ctr - counter
+
+            Random rnd = new Random(); // Véletlen szám létrehozása
+
+            while (szamlalo < 10)
+            {
+                szam = (int) rnd.Next(1, 101);
+                Console.WriteLine("{0}. szám: {1}", (szamlalo + 1), szam);
+
+                osszeg += szam; //özzseg = összeg + szam
+                szamlalo++; // szamlalo = szamlalo + 1
+            }
+
+            Console.WriteLine("\nA {0} szám összege: {1}.", szamlalo, osszeg);
+            Console.WriteLine("\nA számok átlaga: {0}.", osszeg/szamlalo);
+
+            Console.ReadKey();
+        }
+    }
+    */
+
+    /* while paros-e
+    class even
+    {
+        static void Main()
+        {
+            int ctr = 0; //counter
+
+            while (true)
+            {
+                ctr++;
+
+                if (ctr > 10)
+                {
+                    break;
+                }
+                else if ((ctr % 2) == 1)
+                {
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine("...{0}...", ctr);
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("Kész!");
+            Console.ReadKey();
+        }
+    }
+    */
+
+    /* do while átlagszám
+    class do_it
+    {
+        static void Main()
+        {
+            int ttl = 0;
+            int nbr = 0;
+            int ctr = 0;
+
+            Random rnd = new Random();
+
+            do
+            {
+                nbr = (int)rnd.Next(1, 11);
+                ctr++;
+                ttl += nbr;
+
+                Console.WriteLine("{0}. szám: {1}.", ctr, nbr);
+            } while (nbr != 5);
+
+            Console.WriteLine("\n{0} szám lett generálva.", ctr);
+            Console.WriteLine("A számok összege: {0}.", ttl);
+            Console.WriteLine("A számok átlaga: {0}.", ttl/ctr);
+            Console.ReadKey();
+        }
+    }
+    */
+
+
 }
